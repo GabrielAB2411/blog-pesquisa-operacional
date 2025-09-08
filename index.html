@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Métodos da Pesquisa Operacional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex; min-height: 100vh;
+      background: linear-gradient(120deg, #e6f4ea, #f3f8f4); color: #333;
+    }
+    nav {
+      width: 240px; background: linear-gradient(180deg, #1b4332, #2d6a4f);
+      padding: 30px 20px; position: fixed; height: 100%;
+      box-shadow: 3px 0 10px rgba(0,0,0,0.2);
+    }
+    nav h2 { font-size: 22px; margin-bottom: 30px; text-align: center; color: #fff; }
+    nav a {
+      display: block; color: #d4f4dd; text-decoration: none;
+      margin: 12px 0; font-weight: 700; padding: 10px;
+      border-radius: 8px; transition: .3s;
+    }
+    nav a:hover { background-color: #52b788; color: #fff; }
+    main { margin-left: 260px; padding: 40px; flex: 1; }
+    header {
+      background: linear-gradient(120deg, #40916c, #2d6a4f); color: #fff;
+      padding: 25px; border-radius: 12px; margin-bottom: 30px;
+      box-shadow: 0 3px 8px rgba(0,0,0,.2);
+    }
+    header h1 { margin-bottom: 10px; }
+    .card {
+      background: #fff; padding: 25px; border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,.1);
+      margin-bottom: 40px; transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 15px rgba(0,0,0,.15);
+    }
+    .card img, .card iframe {
+      width: 100%; margin-top: 15px; border-radius: 8px;
+    }
+    h2 { color: #1b4332; margin-bottom: 10px; }
+    h3 { margin-top: 20px; margin-bottom: 10px; color: #40916c; }
+    ul { padding-left: 20px; margin-bottom: 15px; }
+    footer {
+      margin-top: 50px; padding: 20px;
+      background: linear-gradient(90deg, #1b4332, #2d6a4f);
+      color: #fff; text-align: center; border-radius: 12px;
+    }
+    .integrantes { margin-top: 10px; }
+    @media (max-width: 768px) {
+      nav {
+        position: relative; width: 100%; height: auto;
+        display: flex; overflow-x: auto;
+      }
+      main { margin-left: 0; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav aria-label="Navegação principal">
+    <h2>Navegação</h2>
+    <a href="#inicio">Início</a>
+    <a href="#transporte">Transporte</a>
+    <a href="#caminho">Caminho Mínimo</a>
+    <a href="#mochila">Mochila</a>
+    <a href="#cpm">Caminho Crítico</a>
+    <a href="#filas">Teoria das Filas</a>
+    <a href="#referencias">Referências</a>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Métodos da Pesquisa Operacional</h1>
+      <p>Um guia interativo para entender os principais métodos utilizados na tomada de decisões otimizadas.</p>
+    </header>
+
+    <section id="inicio" class="card">
+      <h2>📌 Sobre o Projeto</h2>
+      <p>Este blog foi desenvolvido como atividade acadêmica para a disciplina de Pesquisa Operacional. O objetivo é explicar de forma simples e visual os métodos estudados nessa área.</p>
+      <div class="integrantes">
+        <h3>Integrantes:</h3>
+        <ul>
+          <li>Gabriel Alves – 081220041</li>
+          <li>Gustavo Braz – 081220001</li>
+          <li>Ruan Faccin – 081220029</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="transporte" class="card">
+      <h2>🚚 Método de Transporte</h2>
+      <p>Busca otimizar o transporte de mercadorias entre fornecedores e destinos, minimizando os custos.</p>
+      <h3>Aplicações:</h3>
+      <ul>
+        <li>Distribuição logística</li>
+        <li>Transporte urbano</li>
+        <li>Planejamento de fábricas</li>
+      </ul>
+      <iframe src="https://www.youtube.com/embed/yNhg_yVX5YA?rel=0" title="Método de Transporte" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="caminho" class="card">
+      <h2>🗺️ Caminho Mínimo (Dijkstra)</h2>
+      <p>Determina o caminho mais curto entre dois pontos em um grafo, muito usado em rotas de GPS e redes.</p>
+      <h3>Aplicações:</h3>
+      <ul>
+        <li>Navegadores (Google Maps, Waze)</li>
+        <li>Jogos e IA</li>
+        <li>Roteamento de dados em redes</li>
+      </ul>
+      <iframe src="https://www.youtube.com/embed/hsJBilAiZDY?rel=0" title="Algoritmo de Dijkstra" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="mochila" class="card">
+      <h2>🎒 Problema da Mochila</h2>
+      <p>Consiste em escolher itens com peso e valor distintos que maximizem o valor total sem exceder o limite de capacidade.</p>
+      <h3>Aplicações:</h3>
+      <ul>
+        <li>Investimentos com orçamento limitado</li>
+        <li>Montagem de pacotes de produtos</li>
+        <li>Alocação de recursos</li>
+      </ul>
+      <iframe src="https://www.youtube.com/embed/SUcP4uah8JU?rel=0" title="Problema da Mochila" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="cpm" class="card">
+      <h2>📈 Análise de Caminho Crítico (CPM)</h2>
+      <p>Identifica as atividades que determinam a duração mínima de um projeto, focando no controle de prazos.</p>
+      <h3>Aplicações:</h3>
+      <ul>
+        <li>Construção civil</li>
+        <li>Desenvolvimento de software</li>
+        <li>Planejamento estratégico</li>
+      </ul>
+      <img src="https://pt.smartsheet.com/sites/default/files/17-IC-CriticalPath-network-diagram3-PT.png" alt="Diagrama Caminho Crítico">
+    </section>
+
+    <section id="filas" class="card">
+      <h2>⏳ Teoria das Filas</h2>
+      <p>Estuda o comportamento de filas para melhorar processos de atendimento e reduzir o tempo de espera.</p>
+      <h3>Aplicações:</h3>
+      <ul>
+        <li>Hospitais e clínicas</li>
+        <li>Call centers</li>
+        <li>Redes de computadores</li>
+      </ul>
+      <img src="https://minio.scielo.br/documentstore/1678-5142/Bd4g9K6fDKMPH3yjXVVNKQc/b7438935140b4c3ae8e5d28a611f9df744bd0372.gif" alt="Diagrama Teoria das Filas">
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>📚 Referências</h2>
+      <ul>
+        <li>Winston, W. L. – Pesquisa Operacional: Aplicações e Algoritmos</li>
+        <li>Hillier & Lieberman – Introdução à Pesquisa Operacional</li>
+        <li>SlideShare – Diagramas PERT, filas, mochila, transporte</li>
+        <li>Vídeos do YouTube usados como apoio audiovisual</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>🧠 Projeto acadêmico desenvolvido por Gabriel Alves, Gustavo Braz e Ruan Faccin – Setembro/2025</p>
+    </footer>
+  </main>
+</body>
+</html>
